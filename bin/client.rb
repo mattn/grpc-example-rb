@@ -4,7 +4,7 @@ require 'grpc'
 require 'customer_service_services'
 
 def main
-  stub = Proto::CustomerService::Stub.new('localhost:50051')
+  stub = Proto::CustomerService::Stub.new('localhost:11111')
   if ARGV.size == 2
     stub.add_person(Proto::Person.new(name: ARGV[0], age: ARGV[1].to_i))
   else

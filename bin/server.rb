@@ -21,7 +21,7 @@ end
 def main
   customers = []
   server = GRPC::RpcServer.new
-  server.add_http2_port('0.0.0.0:50051')
+  server.add_http2_port('0.0.0.0:11111')
   server.handle(MyServer.new)
   server.run
 end
